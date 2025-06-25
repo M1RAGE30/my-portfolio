@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Соболевский Максим</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cursor-dot"></div>
+    <div id="cursor-trail"></div>
+    
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">M.S.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Обо мне</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Навыки</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Портфолио</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 hero-title reveal">Соболевский Максим Фёдорович</h1>
+            <p class="lead hero-subtitle reveal">
+                Я <span class="typed-text"></span><span class="cursor"></span>
+            </p>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container">
+             <div class="row align-items-center g-5 reveal">
+                <div class="col-lg-5 text-center">
+                    <div class="about-image-wrapper">
+                        <img src="img/MyPhoto.png" class="img-fluid profile-pic" alt="Моё фото">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="section-title">Обо мне</h2>
+                    <p>Привет! Меня зовут Максим. Я студент 3 курса МКП, увлечённый миром веб-разработки. Мне нравится создавать красивые, функциональные и интуитивно понятные интерфейсы. Каждый новый проект для меня — это возможность научиться чему-то новому и отточить свои навыки.</p>
+                    <p>В свободное время я изучаю новые технологии, слежу за трендами в дизайне и работаю над собственными пет-проектами. Готов к интересным задачам и сотрудничеству!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 reveal">Мои навыки</h2>
+            <div class="row text-center justify-content-center g-4">
+                <div class="col-lg-3 col-md-4 col-6 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper"><i class="devicon-html5-plain colored"></i></div>
+                        <span>HTML5</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper"><i class="devicon-css3-plain colored"></i></div>
+                        <span>CSS3</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper"><i class="devicon-javascript-plain colored"></i></div>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper"><i class="devicon-react-original colored"></i></div>
+                        <span>React</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper"><i class="devicon-bootstrap-plain colored"></i></div>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper"><i class="devicon-mysql-plain-wordmark colored"></i></div>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper"><i class="devicon-typescript-plain colored"></i></div>
+                        <span>TypeScript</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-git-plain colored"></i>
+                            <i class="devicon-github-original colored"></i>
+                        </div>
+                        <span>Git & GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 reveal">Мои проекты</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="portfolio-card h-100">
+                        <img src="img/eTournament.png" class="card-img-top" alt="Проект eTournament">
+                        <div class="card-body">
+                            <h5 class="card-title">eTournament</h5>
+                            <p class="card-text">Веб-платформа для организации онлайн-турниров на ASP.NET Core. Включает регистрацию, управление командами, автоматические сетки и отслеживание матчей.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">Entity Framework</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <a href="https://github.com/M1RAGE30/My-Web-App" class="btn-glow" target="_blank" rel="noopener noreferrer">Смотреть на GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="portfolio-card h-100">
+                        <img src="img/SurvivalGame.png" class="card-img-top" alt="Проект Survival Game">
+                        <div class="card-body">
+                            <h5 class="card-title">Survival Game</h5>
+                            <p class="card-text">3D-песочница на выживание, созданная на Unity. Игрок исследует открытый мир, собирает ресурсы, строит, выполняет квесты от NPC и взаимодействует с динамической средой.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Unity</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">ООП</span>
+                            </div>
+                            <a href="https://github.com/M1RAGE30/Survival-Game" class="btn-glow" target="_blank" rel="noopener noreferrer">Смотреть на GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="portfolio-card h-100">
+                        <img src="img/Portfolio.png" class="card-img-top" alt="Сайт-портфолио">
+                        <div class="card-body">
+                            <h5 class="card-title">Этот сайт-портфолио</h5>
+                            <p class="card-text">Полностью адаптивный сайт-визитка, демонстрирующий мои проекты. Оснащен интерактивным фоном на Canvas, кастомным курсором, анимацией появления контента и 3D-эффектами при наведении.</p>
+                             <div class="tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <a href="https://github.com/M1RAGE30/my-portfolio" class="btn-glow" target="_blank" rel="noopener noreferrer">Смотреть на GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container text-center reveal">
+            <h2 class="section-title">Связаться со мной</h2>
+            <p class="lead mb-4">Вы можете написать мне на почту: <a href="mailto:maxphotoshoper@gmail.com">maxphotoshoper@gmail.com</a></p>
+            <div class="social-icons">
+                <a href="https://t.me/m1ragie" class="social-icon" title="Telegram" target="_blank" rel="noopener noreferrer"><i class="bi bi-telegram"></i></a>
+                <a href="https://github.com/M1RAGE30" class="social-icon" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4"><div class="container"><p>© 2025 Соболевский Максим. Все права защищены.</p></div></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
