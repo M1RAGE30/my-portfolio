@@ -25,6 +25,8 @@ body {
     pointer-events: none;
     border-radius: 50%;
     z-index: 10000;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
 }
 
 #cursor-dot {
@@ -39,7 +41,7 @@ body {
     height: 30px;
     background-color: rgba(0, 245, 195, 0.2);
     transform: translate(-50%, -50%);
-    transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out, opacity 0.3s ease;
 }
 
 #particle-canvas {
@@ -137,6 +139,11 @@ section {
 .hero-subtitle {
     font-size: 1.5rem;
     color: var(--text-color-darker);
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .typed-text {
@@ -243,7 +250,6 @@ section {
 .skill-card:hover span {
     color: var(--text-color);
 }
-
 
 .portfolio-card {
     background-color: var(--card-bg);
@@ -410,6 +416,16 @@ footer {
     section { padding: 4rem 0; }
     .about-image-wrapper { margin-bottom: 2rem; }
     #about .section-title { text-align: center; }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section .container {
+        overflow-x: hidden;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
 }
 
 #cursor-dot.hovered {

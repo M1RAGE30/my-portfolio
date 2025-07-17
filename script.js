@@ -98,22 +98,29 @@ document.addEventListener("DOMContentLoaded", function() {
     initParticles();
     animateParticles();
 
-
     const cursorDot = document.getElementById('cursor-dot');
     const cursorTrail = document.getElementById('cursor-trail');
     let trailX = 0, trailY = 0;
+    let cursorInitialized = false; 
 
     window.addEventListener('mousemove', (e) => {
+        if (!cursorInitialized) {
+            cursorDot.style.opacity = '1';
+            cursorTrail.style.opacity = '1';
+            cursorInitialized = true;
+        }
+        
         const { clientX, clientY } = e;
         cursorDot.style.left = `${clientX}px`;
         cursorDot.style.top = `${clientY}px`;
     });
 
     function animateTrail() {
-        const { clientX, clientY } = mouse;
-        trailX += (clientX - trailX) * 0.2;
-        trailY += (clientY - trailY) * 0.2;
-        cursorTrail.style.transform = `translate(${trailX-15}px, ${trailY-15}px)`;
+        if (cursorInitialized) {
+            trailX += (mouse.x - trailX) * 0.2;
+            trailY += (mouse.y - trailY) * 0.2;
+            cursorTrail.style.transform = `translate(${trailX-15}px, ${trailY-15}px)`;
+        }
         requestAnimationFrame(animateTrail);
     }
     animateTrail();
@@ -162,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const cursorSpan = document.querySelector(".cursor");
     
     if (typedTextSpan && cursorSpan) {
-        const textArray = ["студент 3 курса МКП.", "будущий веб-разработчик.", "энтузиаст своего дела."];
+        const textArray = ["веб-разработчик.", "энтузиаст своего дела.", "превращаю идеи в код."];
         const typingDelay = 100, erasingDelay = 50, newTextDelay = 2000;
         let textArrayIndex = 0, charIndex = 0;
 
